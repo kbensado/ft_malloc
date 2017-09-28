@@ -6,7 +6,7 @@
 #    By: kbensado <kbensado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/05/25 17:59:07 by kbensado          #+#    #+#              #
-#    Updated: 2017/09/28 16:55:32 by kbensado         ###   ########.fr        #
+#    Updated: 2017/09/28 17:11:13 by kbensado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ OBJS = $(addprefix $(OBJS_PATH), $(OBJS_NAME))
 all: odir $(NAME)
 
 $(NAME): $(OBJS)
+	make -C ft_printf
 	@echo " - Making $(NAME)"
 	@$(CC) -shared $(CFLAGS) -o $(NAME) $^ $(LIBRARY)
 	@ln -sf $(NAME) libft_malloc.so

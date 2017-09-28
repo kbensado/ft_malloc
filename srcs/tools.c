@@ -6,7 +6,7 @@
 /*   By: kbensado <kbensado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/22 17:27:57 by kbensado          #+#    #+#             */
-/*   Updated: 2017/08/05 00:30:18 by kbensado         ###   ########.fr       */
+/*   Updated: 2017/09/28 17:26:44 by kbensado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static void		set_pages_size(void)
 	max = sizeof(t_header) * 100;
 	TINY_SIZE = TINY_LEN_MAX;
 	SMALL_SIZE = SMALL_LEN_MAX;
-	TS = TINY_SIZE / 50;
-	SS = SMALL_SIZE / 30;
+	TS = TINY_SIZE / 100;
+	SS = SMALL_SIZE / 100;
 }
 
 int				get_page(size_t size)

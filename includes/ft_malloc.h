@@ -6,7 +6,7 @@
 /*   By: kbensado <kbensado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/22 15:43:31 by kbensado          #+#    #+#             */
-/*   Updated: 2017/08/05 00:32:11 by kbensado         ###   ########.fr       */
+/*   Updated: 2017/09/28 17:29:12 by kbensado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@
 # define TINY_SIZE g_mems_list.tiny_size_max
 # define SMALL_SIZE g_mems_list.small_size_max
 
-# define TINY_LEN_MAX getpagesize() * 9
-# define SMALL_LEN_MAX getpagesize() * 12
+# define TINY_LEN_MAX (SMALL_LEN_MAX / 4)
+# define SMALL_LEN_MAX getpagesize() * 50
 # define FLAG_PROT PROT_READ | PROT_WRITE
 # define FLAG_MAP MAP_ANON | MAP_PRIVATE
 # define SIZE_LEFT (long long)(new->size - size - sizeof(t_header))
